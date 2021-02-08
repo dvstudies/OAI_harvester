@@ -5,13 +5,13 @@ The repository contains the following files:
 
 * _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run `pip install -r requirements.txt`
 * _Biblhertz_IMG_harvester.py_ A python script of an image harvester. The latter is based on the database collected with the _Biblhertz_OAI_harvester.py_. In order to run the script, the nature of the images to be downloaded has to be specified. The script takes the following parameters:
-... --type [Zeichnung Text Ort ...]
-... --artist [Caravaggio Bernini ...]
-  ** --title []
-  ** --date_begin [1560]
-  ** --date_end [1760]
-  ** --medium [Marmor Öl Papier ...]
-  ** --all [True | False]
+⋅⋅⋅ --type [Zeichnung Text Ort ...]
+⋅⋅⋅ --artist [Caravaggio Bernini ...]
+⋅⋅⋅ --title []
+⋅⋅⋅ --date_begin [1560]
+⋅⋅⋅ --date_end [1760]
+⋅⋅⋅ --medium [Marmor Öl Papier ...]
+⋅⋅⋅ --all [True | False]
 * _Biblhertz_OAI_harvester.py_ A python script version of an OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database. To run on a terminal `python Biblhertz_OAI_harvester.py`
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of an OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
 * _Biblhertz_foto_retrieval.ipynb_ A first draft to collect digital images based on a local .xml file of the online database. __Will be deleted soon__
