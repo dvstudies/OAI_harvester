@@ -5,7 +5,7 @@ The repository contains the following files:
 
 * _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run `pip install -r requirements.txt`
 * _Biblhertz_IMG_harvester.py_ A python script of an image harvester. The latter is based on the database collected with the _Biblhertz_OAI_harvester.py_. In order to run the script, the nature of the images to be downloaded has to be specified. The script takes the following parameters:
-⋅⋅⋅ --type [Zeichnung Text Ort ...]
+  ⋅⋅⋅ --type [Zeichnung Text Ort ...]
 ⋅⋅⋅ --artist [Caravaggio Bernini ...]
 ⋅⋅⋅ --title []
 ⋅⋅⋅ --date_begin [1560]
