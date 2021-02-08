@@ -1,12 +1,12 @@
-# Content
+# OAI_harvester
+The present OAI harvester is an implementation of a harvester to collect iconographic material from the [Online Catalogue](http://foto.biblhertz.it/exist/foto/search.html) of the [Photographic Collection](https://www.biblhertz.it/en/photographic-collection) (Fototeca) at [the Max-Planck Center for the History of Art and Architecture – Bibliotheca Hertziana](https://www.biblhertz.it/en/home). The project contains the following files:
+
 * _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run __pip install -r requirements.txt__
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of a OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
 
-# Objective
+## TODO
 
-This project aims at producing a OAI harvester to collect iconographic material from the [Online Catalogue](http://foto.biblhertz.it/exist/foto/search.html) of the [Photographic Collection](https://www.biblhertz.it/en/photographic-collection) (Fototeca) at [the Max-Planck Center for the History of Art and Architecture – Bibliotheca Hertziana](https://www.biblhertz.it/en/home)
-
-# Specific Documentation
+## Specific Documentation
 
 The Fototeca provides [documentation](https://github.com/hertzphoto/RomaFototeca/tree/master/documentation) about its OAI system on its [GitHub account 'hertzphoto'](https://github.com/hertzphoto/RomaFototeca): 
 * [Identifiers[(https://github.com/hertzphoto/RomaFototeca/blob/master/documentation/identifiers.md)
