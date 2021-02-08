@@ -18,6 +18,10 @@ The repository contains the following files:
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of an OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
 * _Biblhertz_foto_retrieval.ipynb_ A first draft to collect digital images based on a local .xml file of the online database. __Will be deleted soon__
 
+## How to use the harvester
+First run _Biblhertz_OAI_harvester.py_ in your terminal. The database _biblertz.db_ will be created in your current folder.
+Then, if you want to collect images on top of the metadata, run the _Biblhertz_OAI_harvester.py_ script. A folder holding images will be created.
+
 ## TODO
 - [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
 - [x] Create a .py version of the harvester to run on command line
