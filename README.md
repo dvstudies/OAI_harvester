@@ -5,8 +5,8 @@ The present OAI harvester is an implementation of a harvester to collect iconogr
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of a OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
 
 ## TODO
-[x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
-[ ] Get digital images from specifics or all data collected with _Biblhertz_OAI_harvester.ipynb_
+- [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
+- [ ] Get digital images from specifics or all data collected with _Biblhertz_OAI_harvester.ipynb_
 
 ## Specific Documentation
 
