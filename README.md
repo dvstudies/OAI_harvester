@@ -3,10 +3,12 @@ The present OAI harvester is an implementation of a harvester to collect iconogr
 
 * _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run __pip install -r requirements.txt__
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of a OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
+* _Biblhertz_foto_retrieval.ipynb_ A first draft to collect digital images based on a local .xml file of the online database. __Will be deleted soon__
 
 ## TODO
 - [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
-- [ ] Get digital images from specifics or all data collected with _Biblhertz_OAI_harvester.ipynb_
+- [ ] Create a .py version of the harvester to run on command line
+- [ ] Get digital images from specific types or all data collected with _Biblhertz_OAI_harvester.ipynb_
 
 ## Specific Documentation
 
@@ -18,7 +20,7 @@ The Fototeca provides [documentation](https://github.com/hertzphoto/RomaFototeca
 
 The data in the Online catalogue is organized according to the [Marburger Informations-, Dokumentations-, und Adminisstrations-System (MIDAS)](http://archiv.ub.uni-heidelberg.de/artdok/3770/) (Bove, Heusigner and Kailus. 2001).
 
-# Reference project:
+## Reference project:
 
 The Städel Museum provides [best-practice documentation](https://sammlung.staedelmuseum.de/en/oai/guide) about their [OAI interface](https://sammlung.staedelmuseum.de/api/oai?verb=Identify)
 
