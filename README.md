@@ -19,8 +19,10 @@ The repository contains the following files:
 * _Biblhertz_foto_retrieval.ipynb_ A first draft to collect digital images based on a local .xml file of the online database. __Will be deleted soon__
 
 ## How to use the harvester
-First run _Biblhertz_OAI_harvester.py_ in your terminal. The database _biblertz.db_ will be created in your current folder.
-Then, if you want to collect images on top of the metadata, run the _Biblhertz_OAI_harvester.py_ script. A folder holding images will be created.
+First run _Biblhertz_OAI_harvester.py_ in your terminal. The database _biblhertz.db_ will be created in your current folder.
+Then, if you want to collect images on top of the metadata, run the _Biblhertz_OAI_harvester.py_ script. A folder called _biblhertz_images_ will be created in your current directory.
+`python Biblhertz_OAI_harvester.py`
+`python Biblhertz_IMG_harvester.py --type Zeichnung Malerei --date_begin 1560`
 
 ## TODO
 - [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
