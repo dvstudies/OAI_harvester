@@ -1,13 +1,16 @@
 # OAI_harvester
-The present OAI harvester is an implementation of a harvester to collect iconographic material from the [Online Catalogue](http://foto.biblhertz.it/exist/foto/search.html) of the [Photographic Collection](https://www.biblhertz.it/en/photographic-collection) (Fototeca) at [the Max-Planck Center for the History of Art and Architecture – Bibliotheca Hertziana](https://www.biblhertz.it/en/home) (Biblhertz). The project contains the following files:
+The present OAI harvester is an implementation of a harvester to collect iconographic material from the [Online Catalogue](http://foto.biblhertz.it/exist/foto/search.html) of the [Photographic Collection](https://www.biblhertz.it/en/photographic-collection) (Fototeca) at [the Max-Planck Center for the History of Art and Architecture – Bibliotheca Hertziana](https://www.biblhertz.it/en/home) (Biblhertz). 
 
-* _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run __pip install -r requirements.txt__
+The repository contains the following files:
+
+* _requirements.txt_ All the required modules that have to be installed in order to run _Biblhertz_OAI_harvester.ipynb_. Please run `pip install -r requirements.txt`
+* _Biblhertz_OAI_harvester.py_ A python script version of a OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database. To run on a terminal `python Biblhertz_OAI_harvester.py`
 * _Biblhertz_OAI_harvester.ipynb_ A python notebook version of a OAI harvester which queries the [https://oai.biblhertz.it/foto/oai-pmh] url, retrieves all the objects with identifiers '08######' and stores their corresponding information in a _biblhertz.db_ database
 * _Biblhertz_foto_retrieval.ipynb_ A first draft to collect digital images based on a local .xml file of the online database. __Will be deleted soon__
 
 ## TODO
 - [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
-- [ ] Create a .py version of the harvester to run on command line
+- [x] Create a .py version of the harvester to run on command line
 - [ ] Get digital images from specific types or all data collected with _Biblhertz_OAI_harvester.ipynb_
 
 ## Specific Documentation
