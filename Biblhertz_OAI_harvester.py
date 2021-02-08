@@ -226,7 +226,7 @@ for record in records:
             objectsSet.append((object_ID, title, artist_GND, artist_name, date_begin, date_end,
                                current_location, type_, medium, dimensions, "unavailable"))
         if iteration > 500 :
-            print(f"-", end="")
+            print(f"-", end="", flush=True)
             cur.executemany(insert_cmd, objectsSet)
             objectsSet = []
             iteration = 0
@@ -236,12 +236,7 @@ if objectsSet:
     conn.commit()
 print(f"\nFinal objects added to the database")           
 conn.close()
-nd_time = time.time()
+end_time = time.time()
 print("Total execution time = %.6f seconds" % (end_time-start_time))    
-
-
-# In[ ]:
-
-
 
 
