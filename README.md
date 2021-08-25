@@ -26,11 +26,6 @@ python Biblhertz_OAI_harvester.py
 python Biblhertz_IMG_harvester.py --type Zeichnung Malerei --date_begin 1560
 ```
 
-## TODO
-- [x] Get all objects information from the Fototeca of the Bibliotheca Hertziana
-- [x] Create a .py version of the harvester to run on command line
-- [x] Get digital images from specific types or all data collected with _Biblhertz_OAI_harvester.ipynb_
-
 ## Specific Documentation
 
 The Fototeca provides [documentation](https://github.com/hertzphoto/RomaFototeca/tree/master/documentation) about its OAI system on its [GitHub account 'hertzphoto'](https://github.com/hertzphoto/RomaFototeca): 
