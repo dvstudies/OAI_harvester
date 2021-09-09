@@ -1,6 +1,7 @@
-#!/usr/bin/env python
-# coding: utf-8
-
+"""
+@Author: (https://github.com/VBernasconi) V.Bernasconi
+last update: 09.2021
+"""
 import pandas as pd
 import sqlite3
 import argparse
@@ -8,8 +9,10 @@ import requests
 import time
 import os
 import sys
+from os import listdir
+from os.path import isfile, join
 
-db_name = 'biblhertz_02_2021_03.db'
+db_name = 'biblhertz.db'
 img_url = "http://fotothek.biblhertz.it/bh/2048px/"
 
 conn = sqlite3.connect(db_name, isolation_level=None, detect_types=sqlite3.PARSE_COLNAMES)
@@ -18,7 +21,7 @@ df = pd.read_sql_query("SELECT * FROM Objects", conn)
 """
 getImages
 
-Create a folder and store the images downloaded from their identifiers provided 
+Create a folder and store the images downloaded from their identifiers provided
 in the list of image identifiers given as a parameter
 
 @param listIDs a list of digital image IDs
@@ -30,16 +33,20 @@ def getImages(listImgs, img_url):
 	#create a folder to store the images
 	os.makedirs("biblhertz_images", exist_ok=True)
 	print("Downloading images ", end="")
+	#get a list if images have already been downloaded in the past
+	existImgs = [f for f in listdir("biblhertz_images") if isfile(join("biblhertz_images", f))]
 	for img_ in listImgs:
-		response = requests.get(img_url+img_+".jpg")
-		if response: #if the image request is positive, download the image in the local folder "images_bb"
-			print("-", end="", flush=True)
-			name = "biblhertz_images/"+str(img_)+".jpg"
-			file = open(name, "wb")
-			file.write(response.content)
-			file.close()
-		else:
-			errorIDs.append(img_)
+		img_file = str(img_)+".jpg"
+		if img_file not in existImgs:
+			response = requests.get(img_url+img_file)
+			if response: #if the image request is positive, download the image in the local folder "images_bb"
+				print("-", end="", flush=True)
+				name = "biblhertz_images/"+img_file
+				file = open(name, "wb")
+				file.write(response.content)
+				file.close()
+			else:
+				errorIDs.append(img_)
 	return errorIDs
 
 #Biblhertz_IMG_harvester.py --type Zeichnung Stadt Ort --artist --title --date_begin --date_end --medium
@@ -103,7 +110,7 @@ img_list =[]
 if args.type:
 	print("Requested type: %r" % args.type)
 	#img_list.append(df[(df['type'].isin(args.type)) & (df['img_digital']!='unavailable')]['type'])
-	img_list.extend(list(df[(df['type'].str.contains('|'.join(args.type))) & (df['img_digital']!='unavailable')]['img_digital']))		  
+	img_list.extend(list(df[(df['type'].str.contains('|'.join(args.type))) & (df['img_digital']!='unavailable')]['img_digital']))
 if args.title:
 	print("Requested title: %r" % args.title)
 	img_list.extend(df[(df['title'].str.contains('|'.join(args.title))) & (df['img_digital']!='unavailable')]['img_digital'])
@@ -128,4 +135,3 @@ else:
 	errorIDs = getImages(img_list, img_url)
 	print("The program was not able to download the following images:")
 	print(errorIDs)
-
